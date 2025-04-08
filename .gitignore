@@ -1,0 +1,16 @@
+# Ignoruj foldery bin i obj
+bin/
+obj/
+
+# Ignoruj plik rozwiązania (solution)
+*.sln
+
+# Ignoruj pliki tymczasowe i backupy
+*.tmp
+*.bak
+*.swp
+*~
+
+# Ignoruj pliki specyficzne dla Visual Studio
+.vs/
+*.user
