@@ -3,7 +3,7 @@ bin/
 obj/
 
 # Ignoruj plik rozwiązania (solution)
-*.sln
+# *.sln
 
 # Ignoruj pliki tymczasowe i backupy
 *.tmp
