@@ -21,8 +21,54 @@ public class GameDataParserApp
 {
     public void Run()
     {
-        bool isFileRead = false;
-        var fileContents = default(string);
+        string fileName = ReadValidFilePathFromUser();
+
+        var fileContents = File.ReadAllText(fileName);
+
+        var videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
+        PrintGames(videoGames);
+    }
+
+    private static void PrintGames(List<VideoGame> videoGames)
+    {
+        if (videoGames.Count > 0)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Loaded games are:");
+            foreach (var videoGame in videoGames)
+            {
+                Console.WriteLine(videoGame);
+            }
+        }
+        else
+        {
+            Console.WriteLine("No games are present in the input file");
+        }
+    }
+
+    private static List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
+    {
+        try
+        {
+            return JsonSerializer.Deserialize<List<VideoGame>>(fileContents);
+        }
+        catch (JsonException ex)
+        {
+            var originalColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"JSON in {fileName} file was not " +
+                $"in a valid format. JSON body:");
+            Console.WriteLine(fileContents);
+            Console.ForegroundColor = originalColor;
+
+            throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
+        }
+
+    }
+
+    private static string ReadValidFilePathFromUser()
+    {
+        bool isFilePathValid = false;
         var fileName = default(string);
         do
         {
@@ -43,41 +89,11 @@ public class GameDataParserApp
             }
             else
             {
-                fileContents = File.ReadAllText(fileName);
-                isFileRead = true;
+
+                isFilePathValid = true;
             }
-        } while (!isFileRead);
-
-        List<VideoGame> videoGames = default;
-        try
-        {
-            videoGames = JsonSerializer.Deserialize<List<VideoGame>>(fileContents);
-        }
-        catch (JsonException ex)
-        {
-            var originalColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"JSON in {fileName} file was not " +
-                $"in a valid format. JSON body:");
-            Console.WriteLine(fileContents);
-            Console.ForegroundColor = originalColor;
-
-            throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
-        }
-
-        if (videoGames.Count > 0)
-        {
-            Console.WriteLine();
-            Console.WriteLine("Loaded games are:");
-            foreach (var videoGame in videoGames)
-            {
-                Console.WriteLine(videoGame);
-            }
-        }
-        else
-        {
-            Console.WriteLine("No games are present in the input file");
-        }
+        } while (!isFilePathValid);
+        return fileName;
     }
 }
 
@@ -89,5 +105,4 @@ public class VideoGame
 
     public override string ToString() =>
         $"{Title}, released in {ReleaseYear}, rating: {Rating}";
-
 }
