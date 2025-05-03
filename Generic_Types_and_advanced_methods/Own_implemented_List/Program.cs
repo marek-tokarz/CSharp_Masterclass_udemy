@@ -48,4 +48,15 @@ class ListOfInts
 
         _items[_size] = 0;
     }
+
+    public int GetAtIndex(int index)
+    {
+        if (index < 0 || index >= _size)
+        {
+            throw new IndexOutOfRangeException(
+                $"Index {index} is outside the bounds of the list.");
+        }
+
+        return _items[index];
+    }
 }
