@@ -1,11 +1,11 @@
 ﻿var numbers = new List<int> { 5, 3, 2, 8, 16, 7 };
-TwoInts minAndMax = GetMinAndMax(numbers);
-Console.WriteLine("Smallest number is" + minAndMax.Int1);
-Console.WriteLine("Largest number is" + minAndMax.Int2);
+SimpleTuple<int, int> minAndMax = GetMinAndMax(numbers);
+Console.WriteLine("Smallest number is " + minAndMax.Item1);
+Console.WriteLine("Largest number is " + minAndMax.Item2);
 
 Console.ReadKey();
 
-TwoInts GetMinAndMax(IEnumerable<int> input)
+SimpleTuple<int, int> GetMinAndMax(IEnumerable<int> input)
 {
     if(!input.Any())
     {
@@ -29,18 +29,17 @@ TwoInts GetMinAndMax(IEnumerable<int> input)
         }
     }
 
-    return new TwoInts(min, max);
+    return new SimpleTuple<int, int>(min, max);
 }
 
-
-public class TwoInts
+public class SimpleTuple<T1, T2>
 {
-    public TwoInts(int int1, int int2)
+    public SimpleTuple(T1 item1, T2 item2)
     {
-        Int1 = int1;
-        Int2 = int2;
+        Item1 = item1;
+        Item2 = item2;
     }
 
-    public int Int1 { get; }
-    public int Int2 { get; }
+    public T1 Item1 { get; }
+    public T2 Item2 { get; }
 }
