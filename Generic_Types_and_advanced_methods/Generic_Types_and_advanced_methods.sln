@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Own_implemented_List", "Own_implemented_List\Own_implemented_List.csproj", "{14BD6033-589A-46B7-B3F1-62C5A0B46291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuples\Tuples.csproj", "{FA0B9BF9-5B1D-48DA-BB14-0EDFB06F20F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{14BD6033-589A-46B7-B3F1-62C5A0B46291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14BD6033-589A-46B7-B3F1-62C5A0B46291}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14BD6033-589A-46B7-B3F1-62C5A0B46291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0B9BF9-5B1D-48DA-BB14-0EDFB06F20F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0B9BF9-5B1D-48DA-BB14-0EDFB06F20F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0B9BF9-5B1D-48DA-BB14-0EDFB06F20F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0B9BF9-5B1D-48DA-BB14-0EDFB06F20F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
