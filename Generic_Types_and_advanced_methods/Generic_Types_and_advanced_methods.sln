@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuples\Tuples.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "ArrayList\ArrayList.csproj", "{FDD138B8-71C6-4976-8A1B-1058514777DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic_method", "Generic_method\Generic_method.csproj", "{9025EAA2-AE9C-4944-950A-1E517A271E2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FDD138B8-71C6-4976-8A1B-1058514777DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD138B8-71C6-4976-8A1B-1058514777DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD138B8-71C6-4976-8A1B-1058514777DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9025EAA2-AE9C-4944-950A-1E517A271E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9025EAA2-AE9C-4944-950A-1E517A271E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9025EAA2-AE9C-4944-950A-1E517A271E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9025EAA2-AE9C-4944-950A-1E517A271E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
