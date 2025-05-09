@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic_method", "Generic_m
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IComparable_Interface", "IComparable_Interface\IComparable_Interface.csproj", "{C865B1BB-BC8F-4B7C-8AF7-5F5C6C576429}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcs_Actions", "Funcs_Actions\Funcs_Actions.csproj", "{FDB760C3-26E3-4886-8CEF-7BE09E50EE21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C865B1BB-BC8F-4B7C-8AF7-5F5C6C576429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C865B1BB-BC8F-4B7C-8AF7-5F5C6C576429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C865B1BB-BC8F-4B7C-8AF7-5F5C6C576429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB760C3-26E3-4886-8CEF-7BE09E50EE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB760C3-26E3-4886-8CEF-7BE09E50EE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB760C3-26E3-4886-8CEF-7BE09E50EE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB760C3-26E3-4886-8CEF-7BE09E50EE21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
