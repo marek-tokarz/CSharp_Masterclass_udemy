@@ -1,16 +1,16 @@
 ﻿var numbers = new[] { 1, 4, 7, 19, 2 };
 
 // Func<int, bool> predicate1 = IsLargerThan10;
-Console.WriteLine(
-    "IsAnyLargerThan10? " + IsAny(numbers, predicate1));
+//Console.WriteLine(
+//    "IsAnyLargerThan10? " + IsAny(numbers, predicate1));
 
 // we can pass directly a methods (we do not need a variables)
 Console.WriteLine(
     "IsAnyLargerThan10? " + IsAny(numbers, n => n > 10));
 
 // Func<int, bool> predicate2 = IsEven;
-Console.WriteLine(
-    "IsAnyEven " + IsAny(numbers, predicate2));
+//Console.WriteLine(
+//   "IsAnyEven " + IsAny(numbers, predicate2));
 
 // we can pass directly a methods (we do not need a variables)
 Console.WriteLine(
