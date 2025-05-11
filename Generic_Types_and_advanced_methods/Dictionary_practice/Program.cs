@@ -45,13 +45,16 @@ Dictionary<string, decimal> CalculateAverageSalaryPerDepartament(
     {
         decimal sumOfSalaries = 0;
 
+        // iterating MonthlySalary in a Dictionary of employess 
         foreach(var employee in employeesPerDepartment.Value)
         {
             sumOfSalaries += employee.MonthlySalary;
         }
 
+        // calculating an average
         var average = sumOfSalaries / employeesPerDepartment.Value.Count;
 
+        // fora current Key, we add a value: average
         result[employeesPerDepartment.Key] = average;
     }
 
