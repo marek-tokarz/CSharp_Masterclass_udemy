@@ -21,6 +21,13 @@ namespace LinqTutorial
             Console.ReadKey();
         }
 
+        public static bool IsAnyWordUpperCase_Linq(
+            IEnumerable<string> words)
+        {
+            return words.Any(word =>
+                word.All(letter => char.IsUpper(letter))); 
+        }
+
         public static bool IsAnyWordUpperCase(
             IEnumerable<string> words)
         {
